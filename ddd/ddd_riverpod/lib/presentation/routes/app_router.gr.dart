@@ -19,62 +19,6 @@ import 'package:ddd_riverpod/presentation/navbar/navbar_page.dart' as _i5;
 import 'package:ddd_riverpod/presentation/profile/profile_page.dart' as _i6;
 import 'package:ddd_riverpod/presentation/purchases/purchases_page.dart' as _i7;
 
-abstract class $AppRouter extends _i9.RootStackRouter {
-  $AppRouter({super.navigatorKey});
-
-  @override
-  final Map<String, _i9.PageFactory> pagesMap = {
-    ChatRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i1.ChatPage(),
-      );
-    },
-    ExploreRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i2.ExplorePage(),
-      );
-    },
-    HomeRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i3.HomePage(),
-      );
-    },
-    LoginRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i4.LoginPage(),
-      );
-    },
-    NavBarRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i5.NavBarPage(),
-      );
-    },
-    ProfileRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i6.ProfilePage(),
-      );
-    },
-    PurchasesRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i7.PurchasesPage(),
-      );
-    },
-    SplashRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i8.SplashPage(),
-      );
-    },
-  };
-}
-
 /// generated route for
 /// [_i1.ChatPage]
 class ChatRoute extends _i9.PageRouteInfo<void> {
@@ -86,7 +30,12 @@ class ChatRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'ChatRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      return const _i1.ChatPage();
+    },
+  );
 }
 
 /// generated route for
@@ -100,7 +49,12 @@ class ExploreRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'ExploreRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      return const _i2.ExplorePage();
+    },
+  );
 }
 
 /// generated route for
@@ -114,7 +68,12 @@ class HomeRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      return const _i3.HomePage();
+    },
+  );
 }
 
 /// generated route for
@@ -128,7 +87,12 @@ class LoginRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'LoginRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      return const _i4.LoginPage();
+    },
+  );
 }
 
 /// generated route for
@@ -142,7 +106,12 @@ class NavBarRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'NavBarRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      return const _i5.NavBarPage();
+    },
+  );
 }
 
 /// generated route for
@@ -156,7 +125,12 @@ class ProfileRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'ProfileRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      return const _i6.ProfilePage();
+    },
+  );
 }
 
 /// generated route for
@@ -170,7 +144,12 @@ class PurchasesRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'PurchasesRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      return const _i7.PurchasesPage();
+    },
+  );
 }
 
 /// generated route for
@@ -184,5 +163,10 @@ class SplashRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'SplashRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      return const _i8.SplashPage();
+    },
+  );
 }
