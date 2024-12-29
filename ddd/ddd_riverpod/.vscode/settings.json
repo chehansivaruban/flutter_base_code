@@ -1,0 +1,4 @@
+{
+  "cmake.sourceDirectory": "/Users/chehansivaruban/Developer/projects/flutter/base_code/ddd/ddd_riverpod/linux",
+  "dart.flutterRunAdditionalArgs": ["--no-enable-impeller"]
+}
