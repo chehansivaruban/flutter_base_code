@@ -9,7 +9,7 @@ class InternetConnectivity {
 
   Future<InternetConnectivityResult> checkConnectivity() async {
     final connectivity = await _connectivity.checkConnectivity();
-    return mapEnum(connectivity);
+    return mapEnum(connectivity[0]);
   }
 
   InternetConnectivityResult mapEnum(ConnectivityResult input) {
@@ -30,6 +30,6 @@ class InternetConnectivity {
 
   Stream<InternetConnectivityResult> _onConnectivityChanged() {
     return _connectivity.onConnectivityChanged
-        .asyncMap((event) => mapEnum(event));
+        .asyncMap((event) => mapEnum(event[0]));
   }
 }
