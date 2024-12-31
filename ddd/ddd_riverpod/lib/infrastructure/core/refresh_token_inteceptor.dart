@@ -10,6 +10,7 @@ import '../authentication/login/login_response_dto.dart';
 import 'base_request_response.dart';
 
 class RefreshTokenInterceptor extends Interceptor {
+  RefreshTokenInterceptor(this._localRepository);
   static final _logUtils = LogUtils(
     featureName: "refreshTokenInterceptor",
     printLog: true,
@@ -17,8 +18,6 @@ class RefreshTokenInterceptor extends Interceptor {
 
   List<Map<dynamic, dynamic>> failedRequests = [];
   bool isRefreshing = false;
-
-  RefreshTokenInterceptor(this._localRepository);
 
   final ILocalRepository _localRepository;
 

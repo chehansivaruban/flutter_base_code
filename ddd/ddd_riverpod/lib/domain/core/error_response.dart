@@ -1,14 +1,7 @@
 /// errors : [{"code":"l_name","message":"The last name field is required."},{"code":"password","message":"The password field is required."}]
+library;
 
 class ErrorResponse {
-  List<Errors>? _errors;
-
-  List<Errors>? get errors => _errors;
-
-  ErrorResponse({List<Errors>? errors}) {
-    _errors = errors;
-  }
-
   ErrorResponse.fromJson(dynamic json) {
     if (json["errors"] != null) {
       _errors = [];
@@ -17,6 +10,13 @@ class ErrorResponse {
       });
     }
   }
+
+  ErrorResponse({List<Errors>? errors}) {
+    _errors = errors;
+  }
+  List<Errors>? _errors;
+
+  List<Errors>? get errors => _errors;
 
   Map<String, dynamic> toJson() {
     var map = <String, dynamic>{};
@@ -31,12 +31,6 @@ class ErrorResponse {
 /// message : "The last name field is required."
 
 class Errors {
-  String? _code;
-  String? _message;
-
-  String? get code => _code;
-  String? get message => _message;
-
   Errors({String? code, String? message}) {
     _code = code;
     _message = message;
@@ -46,6 +40,11 @@ class Errors {
     _code = json["code"];
     _message = json["message"];
   }
+  String? _code;
+  String? _message;
+
+  String? get code => _code;
+  String? get message => _message;
 
   Map<String, dynamic> toJson() {
     var map = <String, dynamic>{};

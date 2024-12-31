@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dartz/dartz.dart';
-import 'package:ddd_riverpod/utils/failure_utils.dart';
+import '../../../utils/failure_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../../application/app_state/app_state_provider.dart';
