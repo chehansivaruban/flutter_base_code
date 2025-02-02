@@ -9,7 +9,7 @@ mixin Config {
 
   static Duration get apiTimeout => const Duration(milliseconds: 6000);
 
-  static String get serverUrl => "https://api.in2dfuture.com/";
+  static String get serverUrl => "ADD YOUR URL";
 
-  static String get liveServerUrl => 'https://api.in2dfuture.com/';
+  static String get liveServerUrl => 'ADD YOUR URL';
 }
